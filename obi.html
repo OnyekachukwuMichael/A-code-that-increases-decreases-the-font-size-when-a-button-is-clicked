@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="demo">
+    <p>Obi is a boy</p>
+  </div>
+  <button id="button1">Increase Font</button>
+  <button id="but">Decrease Font</button>
+  
+  <script>
+    let demo = document.getElementById("demo");
+    let but1 = document.getElementById("button1");
+    let but2 = document.getElementById("but");
+    let p = document.getElementsByTagName("p")[0];
+    let fontSize = 14;
+    
+    but1.addEventListener("click", function(){
+    if(fontSize<40) {
+      fontSize += 2;
+      demo.style.fontSize = fontSize + "px"
+    }
+    })
+    
+    but2.addEventListener("click", function(){
+      if(fontSize>8){
+        fontSize -=2;
+        demo.style.fontSize = fontSize + "px"
+      }
+    })
+    
+  </script>
+  
+</body>
+</html>
